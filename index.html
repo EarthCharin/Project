@@ -1,85 +1,82 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>หน้าลงทะเบียน</title>
+    <title>Smart HR</title>
     <style>
         body {
+            background-color: rgb(255, 255, 255);
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
         }
-        .container {
-            width: 100%;
-            max-width: 600px;
-            margin: 50px auto;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
+
         h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        #roundcorners {
+            border-radius: 25px;
+            padding: 20px;
+            width: 400px;
+            background-color: rgb(179, 200, 243);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
-            color: #333;
         }
+
+        form {
+            margin-top: 20px;
+        }
+
         label {
-            font-size: 16px;
-            color: #333;
-            margin-bottom: 8px;
             display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
         }
+
         input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        input[type="tel"],
-        textarea {
-            width: 100%;
+        input[type="password"] {
+            width: 90%;
             padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
-        input[type="submit"] {
+
+        button {
+            padding: 10px 20px;
             background-color: #4CAF50;
             color: white;
             border: none;
-            padding: 12px 20px;
-            font-size: 16px;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
-            width: 100%;
         }
-        input[type="submit"]:hover {
+
+        button:hover {
             background-color: #45a049;
         }
     </style>
 </head>
+
 <body>
-
-    <div class="container">
-        <h1>ลงทะเบียน</h1>
-        <form action="submit_form.php" method="POST">
-            <label for="name">ชื่อ-นามสกุล:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">อีเมล:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">หมายเลขโทรศัพท์:</label>
-            <input type="tel" id="phone" name="phone" required>
-
-            <label for="password">รหัสผ่าน:</label>
-            <input type="password" id="password" name="password" required>
-
-            <label for="address">ที่อยู่:</label>
-            <textarea id="address" name="address" rows="4" required></textarea>
-
-            <input type="submit" value="ลงทะเบียน">
-        </form>
-    </div>
-
+    <center>
+        <h1>
+            <img src="d:\Data Project\โลโก้หน้าเว็บ ตัวที่ 3.png" alt="Smart HR Logo" height="70" width="70"><br>
+            Smart HR
+        </h1>
+        <div id="roundcorners">
+            <h2>ลงชื่อเข้าใช้</h2>
+            <form action="/login" method="POST">
+                <label for="username">User</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </center>
 </body>
+
 </html>
